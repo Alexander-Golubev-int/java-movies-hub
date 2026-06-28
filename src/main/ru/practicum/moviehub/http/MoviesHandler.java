@@ -40,7 +40,7 @@ class MoviesHandler extends BaseHttpHandler {
     }
 
     private void handleGetMoviesById(HttpExchange exchange) throws IOException {
-        Map<Boolean, Map<Integer, String>> validator = requestValidator.GetValidator(exchange);
+        Map<Boolean, Map<Integer, String>> validator = requestValidator.getValidator(exchange);
         if (validator.containsKey(false)) {
             Map<Integer, String> map = validator.get(false);
             for (Map.Entry<Integer, String> entry : map.entrySet()) {
@@ -58,7 +58,7 @@ class MoviesHandler extends BaseHttpHandler {
     }
 
     private void handleGetMoviesByYear(HttpExchange exchange) throws IOException {
-        Map<Boolean, Map<Integer, String>> validator = requestValidator.GetParametersValidator(exchange);
+        Map<Boolean, Map<Integer, String>> validator = requestValidator.getParametersValidator(exchange);
         if (validator.containsKey(false)) {
             Map<Integer, String> map = validator.get(false);
             for (Map.Entry<Integer, String> entry : map.entrySet()) {
@@ -76,7 +76,7 @@ class MoviesHandler extends BaseHttpHandler {
     }
 
     private void handlePOSTMovies(HttpExchange exchange) throws IOException {
-        Map<Boolean, Map<Integer, String>> validator = requestValidator.PostValidator(exchange);
+        Map<Boolean, Map<Integer, String>> validator = requestValidator.postValidator(exchange);
         if (validator.containsKey(false)) {
             Map<Integer, String> map = validator.get(false);
             for (Map.Entry<Integer, String> entry : map.entrySet()) {
@@ -95,7 +95,7 @@ class MoviesHandler extends BaseHttpHandler {
     }
 
     private void handleDeleteMovieByID(HttpExchange exchange) throws IOException {
-        Map<Boolean, Map<Integer, String>> validator = requestValidator.DeleteValidator(exchange);
+        Map<Boolean, Map<Integer, String>> validator = requestValidator.deleteValidator(exchange);
         if (validator.containsKey(false)) {
             Map<Integer, String> map = validator.get(false);
             for (Map.Entry<Integer, String> entry : map.entrySet()) {

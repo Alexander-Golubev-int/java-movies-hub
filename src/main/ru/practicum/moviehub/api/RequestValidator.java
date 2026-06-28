@@ -17,7 +17,7 @@ import java.util.Map;
 public class RequestValidator {
     StorageFilms storageFilms = new StorageFilms();
 
-    public Map<Boolean, Map<Integer, String>> GetValidator(HttpExchange exchange) {
+    public Map<Boolean, Map<Integer, String>> getValidator(HttpExchange exchange) {
         Map<Boolean, Map<Integer, String>> error = new HashMap<>();
 
         URI uri = exchange.getRequestURI();
@@ -47,7 +47,7 @@ public class RequestValidator {
         return error;
     }
 
-    public Map<Boolean, Map<Integer, String>> GetParametersValidator(HttpExchange exchange) {
+    public Map<Boolean, Map<Integer, String>> getParametersValidator(HttpExchange exchange) {
         Map<Boolean, Map<Integer, String>> error = new HashMap<>();
 
         String parameters = exchange.getRequestURI().getQuery();
@@ -78,7 +78,7 @@ public class RequestValidator {
     }
 
 
-    public Map<Boolean, Map<Integer, String>> PostValidator(HttpExchange exchange) throws IOException {
+    public Map<Boolean, Map<Integer, String>> postValidator(HttpExchange exchange) throws IOException {
         Map<Boolean, Map<Integer, String>> error = new HashMap<>();
 
         Headers headers = exchange.getRequestHeaders();
@@ -195,7 +195,7 @@ public class RequestValidator {
         return error;
     }
 
-    public Map<Boolean, Map<Integer, String>> DeleteValidator(HttpExchange exchange) {
+    public Map<Boolean, Map<Integer, String>> deleteValidator(HttpExchange exchange) {
         Map<Boolean, Map<Integer, String>> error = new HashMap<>();
 
         URI uri = exchange.getRequestURI();
