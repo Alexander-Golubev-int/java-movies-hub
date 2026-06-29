@@ -9,8 +9,8 @@ import java.util.Map;
 
 
 class MoviesHandler extends BaseHttpHandler {
-    StorageFilms storageFilms = new StorageFilms();
-    RequestValidator requestValidator = new RequestValidator();
+    private final StorageFilms storageFilms = new StorageFilms();
+    private final RequestValidator requestValidator = new RequestValidator();
 
     @Override
     public void handle(HttpExchange ex) throws IOException {

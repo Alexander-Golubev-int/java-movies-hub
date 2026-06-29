@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RequestValidator {
-    StorageFilms storageFilms = new StorageFilms();
+    private final StorageFilms storageFilms = new StorageFilms();
 
     public Map<Boolean, Map<Integer, String>> getValidator(HttpExchange exchange) {
         Map<Boolean, Map<Integer, String>> error = new HashMap<>();
